@@ -1,0 +1,11 @@
+syntax = "proto3";
+package health;
+option go_package = "../pb";
+
+message HealthReq {
+    string id = 1;
+}
+
+message HealthResp {
+    string id = 1;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package proto;
+option go_package = "../pb";
+
+message TestReq {
+    string code = 1;
+}
+
+message TestResp {
+    string code = 1;
+}
