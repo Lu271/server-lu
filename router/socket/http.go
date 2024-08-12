@@ -6,8 +6,8 @@ import (
 )
 
 func HttpRouter(g *gin.Engine) {
-	h_router := g.Group("/http")
+	router := g.Group("/http")
 	{
-		h_router.POST("/health", http.SingletonHealthHandler().HealthHandler)
+		router.POST("/health", http.SingletonHealthHandler().HealthHandler)
 	}
 }
