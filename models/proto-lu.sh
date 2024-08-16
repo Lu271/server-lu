@@ -21,7 +21,8 @@ for proto_file in "$PROTO_DIR"/*.proto ; do
     echo "$proto_file"
     # 生成对应的 pb 文件
     protoc --proto_path="$PROTO_DIR" \
-           --go_out="$PB_DIR" \
            --go-grpc_out="$PB_DIR" \
+           --openapi_out="$PB_DIR" \
+           --gofast_out="$PB_DIR" \
            "$proto_file"
 done

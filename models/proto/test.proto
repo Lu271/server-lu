@@ -2,6 +2,10 @@ syntax = "proto3";
 package proto;
 option go_package = "../pb";
 
+service TestService {
+    rpc TestFunc(TestReq) returns (TestResp);
+}
+
 message TestReq {
     string code = 1;
 }
